@@ -1,0 +1,86 @@
+.gridsList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.gridCard {
+  position: relative;
+  background-color: #252527;
+  border-radius: 10px;
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.gridCard:hover {
+  transform: translateY(-5px);
+}
+
+.gridName {
+  position: absolute;
+  top: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.gridTitle {
+  font-size: 20px;
+  margin-top: 150px;
+}
+
+.gridDetails {
+  font-size: 16px;
+  margin: 15px 0;
+}
+
+.watchButton {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.watchButton:hover {
+  background-color: white;
+  color: #1e1e1e;
+}
+
+.gridCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.gridName,
+.gridTitle,
+.gridDetails,
+.watchButton {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 950px) {
+  .gridsList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .gridsList {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

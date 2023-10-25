@@ -1,0 +1,20 @@
+.projects {
+  padding-top: 6rem;
+}
+
+.title {
+  display: flex;
+}
+
+.projects h1 {
+  font-size: 3rem;
+  margin-bottom: 0rem;
+  background: linear-gradient(var(--gradient));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.projects p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
